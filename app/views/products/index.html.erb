@@ -10,7 +10,7 @@ $(function() {
   $(".js-more").on("click", function() {
     var id = $(this).data("id");
     $.get("/products/" + id + ".json", function(data) {
-      console.log(TypeOf(data["inventory"]))
+      console.log(typeOf data["inventory"])
       var description = data["description"]
       var inventoryText = "<strong>Available</strong>";
       if(data["inventory"] === "0"){
